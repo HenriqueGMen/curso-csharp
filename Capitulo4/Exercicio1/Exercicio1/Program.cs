@@ -1,6 +1,4 @@
-﻿
-using Exercicio4;
-using System.Globalization;
+﻿using System.Globalization;
 
 namespace Capitulo4
 {
@@ -8,7 +6,7 @@ namespace Capitulo4
     {
         static void Main(string[] args)
         {
-            //ComparaIdade();
+            ComparaIdade();
             MediaSalarios();
 
             Console.WriteLine("\nPressione qualquer tecla para sair...");
