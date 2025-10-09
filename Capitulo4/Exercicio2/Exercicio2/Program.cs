@@ -20,6 +20,25 @@ namespace Cap4Exercico2
 
             Console.WriteLine("Dados do Produto: " + produto);
 
+
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("Digite a quantidade de produtos a serem adicionados:");
+            int qtdAdicionada = int.Parse(Console.ReadLine());
+
+            produto.AdicionarQtdEstoque(qtdAdicionada);
+
+            Console.WriteLine("Dados do Produto: " + produto);
+
+            Console.WriteLine("------------------------------");
+            Console.WriteLine("Digite a quantidade de produtos a serem removidos:");
+            int qtdRemovida = int.Parse(Console.ReadLine());
+
+            produto.RemoverQtdEstoque(qtdRemovida);
+
+            Console.WriteLine("Dados do Produto: " + produto);
+
+
+
             Console.WriteLine("\nPressione qualquer tecla para sair...");
             Console.ReadKey();
 

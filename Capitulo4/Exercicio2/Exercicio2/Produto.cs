@@ -14,6 +14,16 @@ namespace Cap4Exercico2
             return Quantidade * Preco;
         }
 
+        public void AdicionarQtdEstoque(int qtdAdicionada)
+        {
+            Quantidade += qtdAdicionada;
+        }
+
+        public void RemoverQtdEstoque(int qtdRemovida)
+        {
+            Quantidade -= qtdRemovida;
+        }
+
         public override string ToString()
         {
            return $"Produto: {Nome}\n" +
@@ -21,5 +31,6 @@ namespace Cap4Exercico2
            $"Quantidade: {Quantidade} unidades\n" +
            $"Preço Total: {ValorTotalEstoque().ToString("C", new CultureInfo("pt-BR"))}";
         }
+
     }
 }
