@@ -6,17 +6,17 @@ namespace Cap4Exercico2
     {
         static void Main(string[] args)
         {
-            Produto produto = new Produto();
-
             Console.WriteLine("Entre os dados do produto:");
             Console.Write("Nome: ");
-            produto.Nome = Console.ReadLine();
+            string nome = Console.ReadLine();
 
             Console.Write("Preço: ");
-            produto.Preco = double.Parse(Console.ReadLine(), new CultureInfo("pt-BR"));
+            double preco = double.Parse(Console.ReadLine(), new CultureInfo("pt-BR"));
 
             Console.Write("Quantidade: ");
-            produto.Quantidade = int.Parse(Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
+
+            Produto produto = new Produto(nome, preco, quantidade);
 
             Console.WriteLine("Dados do Produto: " + produto);
 
