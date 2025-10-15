@@ -5,15 +5,21 @@ namespace Cap4Exercico2
 {
     class Produto
     {
-        public string Nome;
-        public double Preco;
-        public int Quantidade;
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
 
         public Produto(string nome, double preco, int quantidade)
         {
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
+        }
+
+        public Produto(string nome, double preco)
+        {
+            Nome = nome;
+            Preco = preco;
         }
 
         public double ValorTotalEstoque()
