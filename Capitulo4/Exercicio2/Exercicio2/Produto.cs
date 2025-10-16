@@ -6,20 +6,33 @@ namespace Cap4Exercico2
     class Produto
     {
         private string _nome;
-        private double _preco;
-        private int _quantidade;
+        public double Preco { get; private set; }
+        public int Quantidade { get; private set; }
 
         public Produto(string nome, double preco, int quantidade)
         {
-            Nome = nome;
+            _nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
 
         public Produto(string nome, double preco)
         {
-            Nome = nome;
+            _nome = nome;
             Preco = preco;
+        }
+
+        public string Nome
+        {
+            get { return _nome; }
+
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
         }
 
         public double ValorTotalEstoque()
@@ -39,7 +52,7 @@ namespace Cap4Exercico2
 
         public override string ToString()
         {
-           return $"Produto: {Nome}\n" +
+           return $"Produto: {_nome}\n" +
            $"Preço: {Preco.ToString("C", new CultureInfo("pt-BR"))}\n" +
            $"Quantidade: {Quantidade} unidades\n" +
            $"Preço Total: {ValorTotalEstoque().ToString("C", new CultureInfo("pt-BR"))}";
